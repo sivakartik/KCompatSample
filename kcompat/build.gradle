@@ -1,4 +1,38 @@
+plugins {
+    id "com.github.dcendents.android-maven" version "1.5"
+}
+
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = 'KCompat'
+    bintrayName = 'KCompat'
+
+    publishedGroupId = 'com.ksk.marujolla.kcompat'
+    libraryName = 'KCompat'
+    artifact = 'KCompat'
+
+    libraryDescription = 'A simple support library for the custom widgets'
+
+    siteUrl = 'https://github.com/sivakartik/KCompatSample'
+    gitUrl = 'https://github.com/sivakartik/KCompatSample.git'
+
+    libraryVersion = '0.11'
+
+    developerId = 'sivakartik'
+    developerName = 'Koteswara Shiva Kartik Marujolla'
+    developerEmail = 'sivakartik.mk@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 25
@@ -29,3 +63,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
