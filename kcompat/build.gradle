@@ -15,15 +15,15 @@ ext {
     bintrayName = 'KCompat'
 
     publishedGroupId = 'com.ksk.marujolla.kcompat'
-    libraryName = 'KCompat'
-    artifact = 'KCompat'
+    libraryName = 'kcompat'
+    artifact = 'kcompat'
 
     libraryDescription = 'A simple support library for the custom widgets'
 
     siteUrl = 'https://github.com/sivakartik/KCompatSample'
     gitUrl = 'https://github.com/sivakartik/KCompatSample.git'
 
-    libraryVersion = '0.11'
+    libraryVersion = '0.12'
 
     developerId = 'sivakartik'
     developerName = 'Koteswara Shiva Kartik Marujolla'
@@ -53,6 +53,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
 }
 
 dependencies {
