@@ -7,7 +7,6 @@ import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
@@ -87,7 +86,7 @@ public class KCompatProgressBar extends ProgressBar {
      * @see #getIndeterminateTintList()
      * @see Drawable#setTintList(ColorStateList)
      */
-    public void setIndeterminateTintList(@Nullable ColorStateList tint) {
+    public void setIndeterminateTintList(ColorStateList tint) {
         mProgressTintList = tint;
         applyIndeterminateProgressTint();
     }
